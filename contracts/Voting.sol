@@ -137,7 +137,7 @@ contract Voting is Ownable {
         }
     }
     
-    function getWinningProposal() public returns (uint256) {
+    function getWinner() public returns (uint256) {
         require(sessionStatus == WorkflowStatus.VotesTallied, "Cette etape n'est pas disponible");
         countVote();
         return winningProposalId;
